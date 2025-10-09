@@ -1,0 +1,22 @@
+.home-wrapper {
+  height: 100vh;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.home-wrapper.light {
+  background-color: rgba(217, 217, 217, 1);
+  color: rgba(7, 10, 82, 1);
+}
+.home-wrapper.dark {
+  background-color: rgba(53, 53, 53, 1);
+  color: rgba(190, 191, 209, 1);
+}
+
+h1 {
+  font-size: 2.3rem;
+}

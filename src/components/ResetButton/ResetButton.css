@@ -1,0 +1,19 @@
+.reset-button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 1.3rem;
+  margin-top: 32px;
+  font-weight: 700;
+  outline: none;
+}
+
+.reset-button:hover {
+  cursor: pointer;
+}
+.reset-button:active {
+  color: red;
+}
+
+.reset-button-wrapper {
+  grid-row: -2;
+}

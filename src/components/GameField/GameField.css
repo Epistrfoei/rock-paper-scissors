@@ -1,0 +1,26 @@
+.game-field-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  row-gap: 32px;
+}
+
+.game-field-wrapper.light {
+  background-color: rgba(217, 217, 217, 1);
+  color: rgba(7, 10, 82, 1);
+}
+
+.game-field-wrapper.dark {
+  background-color: rgba(53, 53, 53, 1);
+  color: rgba(190, 191, 209, 1);
+}
+
+.game {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
