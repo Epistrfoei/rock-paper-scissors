@@ -6,9 +6,17 @@
   padding-block: 28px;
   border: none;
   color: white;
-  width: clamp(5rem, 11rem, 15rem);
+  width: 11rem;
 }
 
 .button:hover {
   cursor: pointer;
+}
+
+@media (max-width: 650px) {
+  .button {
+    width: 10rem;
+    padding-block: 10px;
+    font-size: 1rem;
+  }
 }

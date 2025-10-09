@@ -1,12 +1,11 @@
-import { useEffect, useState } from "react";
-import Paper2 from "../../../public/Paper2.svg";
-import Rock2 from "../../../public/Rock2.svg";
-import Scissors2 from "../../../public/Scissors2.svg";
-import GameScore from "../GameScore/GameScore";
+import Paper2 from "../../icon/Paper2.svg";
+import Rock2 from "../../icon/Rock2.svg";
+import Scissors2 from "../../icon/Scissors2.svg";
 import CounterScore from "../CounterScore/CounterScore";
-import "./winner.css";
 
-const IsWinner = ({ sign, computerSign }) => {
+import "./calculateWinner.css";
+
+const CalculateWinner = ({ sign, computerSign }) => {
   const isWinner = () => {
     let result;
     if (sign === Paper2 && computerSign === Rock2) {
@@ -32,7 +31,7 @@ const IsWinner = ({ sign, computerSign }) => {
 
   return (
     <>
-      <div className="winner">
+      <div className="calculate-winner">
         {winner}
         <CounterScore winner={winner} />
       </div>
@@ -40,4 +39,4 @@ const IsWinner = ({ sign, computerSign }) => {
   );
 };
 
-export default IsWinner;
+export default CalculateWinner;

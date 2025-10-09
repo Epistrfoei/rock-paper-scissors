@@ -1,5 +1,5 @@
 import Button from "../Button/Button";
-import ButtonChangeTheme from "../ButtonTheme/ButtonChangeTheme";
+import ButtonChangeTheme from "../ButtonChangeTheme/ButtonChangeTheme";
 import "./homeScreen.css";
 import { useState } from "react";
 

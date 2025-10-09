@@ -2,7 +2,7 @@
   border: none;
   background-color: rgba(0, 0, 0, 0);
   font-size: 1.3rem;
-  margin-top: 32px;
+  padding-block: 1.5rem;
   font-weight: 700;
   outline: none;
 }

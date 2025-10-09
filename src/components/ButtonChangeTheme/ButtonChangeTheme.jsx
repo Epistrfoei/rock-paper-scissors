@@ -1,6 +1,5 @@
-import { useState } from "react";
-import darkThemeIcon from "../../../public/darkIcon.svg";
-import lightThemeIcon from "../../../public/lightIcon.svg";
+import darkThemeIcon from "../../icon/darkIcon.svg";
+import lightThemeIcon from "../../icon/lightIcon.svg";
 import "./ButtonChangeTheme.css";
 const ButtonChangeTheme = ({ handleChange, theme }) => {
   return (

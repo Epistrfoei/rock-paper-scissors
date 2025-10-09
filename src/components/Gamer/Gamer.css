@@ -2,4 +2,7 @@
   width: 6rem;
   grid-column: 1;
   grid-row: 2;
+  display: flex;
+  column-gap: 200px;
+  justify-self: center;
 }
