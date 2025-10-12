@@ -1,9 +1,9 @@
 import "./ResetButton.css";
 
-const ResetButton = ({ resetValue }) => {
+const ResetButton = ({ onClick }) => {
   return (
     <div className="reset-button-wrapper">
-      <button onClick={resetValue} className="reset-button">
+      <button onClick={onClick} className="reset-button">
         RESET THE SCORE
       </button>
     </div>

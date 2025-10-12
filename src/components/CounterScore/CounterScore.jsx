@@ -23,7 +23,7 @@ const CounterScore = ({ winner }) => {
 
   return (
     <>
-      <ResetButton resetValue={resetValue} />
+      <ResetButton onClick={resetValue} />
       <div className="gamers">
         <p>PLAYER SCORE: {playerCounter}</p>
         <p>COMPUTER SCORE: {computerCounter} </p>
