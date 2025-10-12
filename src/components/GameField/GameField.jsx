@@ -26,7 +26,7 @@ const GameField = () => {
 
   const handleSign = (event) => {
     const urlList = gameSigns.map((elem) => elem.url);
-    let randomSign = Math.floor(Math.random() * urlList.length);
+    const randomSign = Math.floor(Math.random() * urlList.length);
     setComputerSign(() => urlList[randomSign]);
     setSign(() => event.target.id);
   };
