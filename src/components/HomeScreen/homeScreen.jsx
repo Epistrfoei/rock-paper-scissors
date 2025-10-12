@@ -12,7 +12,7 @@ const HomeScreen = ({ handlePage }) => {
 
   return (
     <div>
-      <div className={`home-wrapper ${isLighttheme ? "light" : "dark"}`}>
+      <div className={`home-wrapper ${isLightTheme ? "light" : "dark"}`}>
         <ButtonChangeTheme handleChange={handleChange} theme={isLightTheme} />
         <Button handlePage={handlePage} />
         <h1>Rock Paper Scissors The game</h1>
