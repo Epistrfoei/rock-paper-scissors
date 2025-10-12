@@ -6,9 +6,11 @@ const CounterScore = ({ winner }) => {
   const [counter, setCounter] = useState(0);
   const [computerCounter, setComputerCounter] = useState(0);
 
+  const initialValue = 0;
+
   const resetValue = () => {
-    setCounter(() => 0);
-    setComputerCounter(() => 0);
+    setCounter(() => initialValue);
+    setComputerCounter(() => initialValue);
   };
 
   useEffect(() => {
