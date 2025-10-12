@@ -10,7 +10,7 @@ import Computer from "../Computer/Computer";
 import CalculateWinner from "../CalculateWinner/CalculateWinner";
 
 const GameField = () => {
-  const [theme, setTheme] = useState(true);
+  const [isLightTheme, setLightTheme] = useState(true);
   const [sign, setSign] = useState(null);
   const [computerSign, setComputerSign] = useState(null);
 
@@ -21,7 +21,7 @@ const GameField = () => {
   ];
 
   const handleChange = () => {
-    setTheme(!theme);
+    setLightTheme((isLightTheme) => !isLightTheme);
   };
 
   const handleSign = (event) => {
@@ -32,8 +32,11 @@ const GameField = () => {
   };
 
   return (
-    <div className={`game-field-wrapper  ${theme ? "light" : "dark"}`}>
-      <ButtonChangeTheme handleChange={handleChange} theme={theme} />
+    <div className={`game-field-wrapper  ${isLightTheme ? "light" : "dark"}`}>
+      <ButtonChangeTheme
+        handleChange={handleChange}
+        isLightTheme={isLightTheme}
+      />
       <h1>Rock Paper Scissors</h1>
 
       <div className="game">
