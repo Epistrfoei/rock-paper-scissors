@@ -6,7 +6,7 @@ import CounterScore from "../CounterScore/CounterScore";
 import "./calculateWinner.css";
 
 const CalculateWinner = ({ sign, computerSign }) => {
-  const identificationWinner = () => {
+  const winnerIdentify = () => {
     if (
       (sign === Paper2 && computerSign === Rock2) ||
       (sign === Rock2 && computerSign === Scissors2) ||
@@ -19,12 +19,11 @@ const CalculateWinner = ({ sign, computerSign }) => {
       (sign === Rock2 && computerSign === Paper2)
     ) {
       return "COMPUTER WON !";
-    } else {
-      return "НИЧЬЯ !";
     }
+    return "НИЧЬЯ !";
   };
 
-  const winner = identificationWinner();
+  const winner = winnerIdentify();
 
   return (
     <>
