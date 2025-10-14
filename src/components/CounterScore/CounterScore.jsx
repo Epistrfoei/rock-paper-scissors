@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 import "./gamers.css";
 import ResetButton from "../ResetButton/ResetButton";
 
+const INITIALVALUE = 0;
+
 const CounterScore = ({ winner }) => {
   const [playerCounter, setPlayerCounter] = useState(0);
   const [computerCounter, setComputerCounter] = useState(0);
 
-  const initialValue = 0;
-
   const resetValue = () => {
-    setPlayerCounter(() => initialValue);
-    setComputerCounter(() => initialValue);
+    setPlayerCounter(() => INITIALVALUE);
+    setComputerCounter(() => INITIALVALUE);
   };
 
   useEffect(() => {
