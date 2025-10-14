@@ -7,7 +7,7 @@ const HomeScreen = ({ handlePage }) => {
   const [isLightTheme, setLightTheme] = useState(true);
 
   const handleChange = () => {
-    setLightTheme(() => !isLightTheme);
+    setLightTheme((isLightTheme) => !isLightTheme);
   };
 
   return (
