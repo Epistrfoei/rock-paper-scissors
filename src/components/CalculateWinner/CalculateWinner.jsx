@@ -6,28 +6,24 @@ import CounterScore from "../CounterScore/CounterScore";
 import "./calculateWinner.css";
 
 const CalculateWinner = ({ sign, computerSign }) => {
-  const isWinner = () => {
-    let result;
-    if (sign === Paper2 && computerSign === Rock2) {
-      result = "YOU WON !";
-    } else if (sign === Rock2 && computerSign === Scissors2) {
-      result = "YOU WON !";
-    } else if (sign === Scissors2 && computerSign === Paper2) {
-      result = "YOU WON !";
-    } else if (sign === Paper2 && computerSign === Scissors2) {
-      result = "COMPUTER WON !";
-    } else if (sign === Scissors2 && computerSign === Rock2) {
-      result = "COMPUTER WON !";
-    } else if (sign === Rock2 && computerSign === Paper2) {
-      result = "COMPUTER WON !";
-    } else if (sign === computerSign) {
-      result = "НИЧЬЯ !";
+  const winnerIdentify = () => {
+    if (
+      (sign === Paper2 && computerSign === Rock2) ||
+      (sign === Rock2 && computerSign === Scissors2) ||
+      (sign === Scissors2 && computerSign === Paper2)
+    ) {
+      return "YOU WON !";
+    } else if (
+      (sign === Paper2 && computerSign === Scissors2) ||
+      (sign === Scissors2 && computerSign === Rock2) ||
+      (sign === Rock2 && computerSign === Paper2)
+    ) {
+      return "COMPUTER WON !";
     }
-
-    return result;
+    return "НИЧЬЯ !";
   };
 
-  const winner = isWinner();
+  const winner = winnerIdentify();
 
   return (
     <>

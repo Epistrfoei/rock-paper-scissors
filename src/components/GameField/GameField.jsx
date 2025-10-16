@@ -10,7 +10,7 @@ import Computer from "../Computer/Computer";
 import CalculateWinner from "../CalculateWinner/CalculateWinner";
 
 const GameField = () => {
-  const [theme, setTheme] = useState(true);
+  const [isLightTheme, setLightTheme] = useState(true);
   const [sign, setSign] = useState(null);
   const [computerSign, setComputerSign] = useState(null);
 
@@ -21,19 +21,22 @@ const GameField = () => {
   ];
 
   const handleChange = () => {
-    setTheme(!theme);
+    setLightTheme((isLightTheme) => !isLightTheme);
   };
 
   const handleSign = (event) => {
-    let random = gameSigns.map((elem) => elem.url);
-    let newRandom = Math.floor(Math.random() * random.length);
-    setComputerSign(() => random[newRandom]);
+    const urlList = gameSigns.map((elem) => elem.url);
+    const randomSignIndex = Math.floor(Math.random() * urlList.length);
+    setComputerSign(() => urlList[randomSignIndex]);
     setSign(() => event.target.id);
   };
 
   return (
-    <div className={`game-field-wrapper  ${theme ? "light" : "dark"}`}>
-      <ButtonChangeTheme handleChange={handleChange} theme={theme} />
+    <div className={`game-field-wrapper  ${isLightTheme ? "light" : "dark"}`}>
+      <ButtonChangeTheme
+        handleChange={handleChange}
+        isLightTheme={isLightTheme}
+      />
       <h1>Rock Paper Scissors</h1>
 
       <div className="game">
